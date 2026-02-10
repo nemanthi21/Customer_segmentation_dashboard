@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import plotly
 
 
 st.set_page_config(
@@ -117,7 +116,7 @@ if has_segment:
             values='Count',
             names='Segment',
             title='Segment Distribution',
-           color_discrete_sequence=plotly.colors.qualitative.Set3
+            color_discrete_sequence=px.colors.qualitative.Set3
 
         )
         st.plotly_chart(fig_pie , use_container_width=True)
@@ -130,7 +129,7 @@ if has_segment:
             y='Count',
             title='Number of customers by segment',
             color='Segment',
-            color_discrete_sequence=plotly.colors.qualitative.Set2
+            color_discrete_sequence=px.colors.qualitative.Set2
         )
         st.plotly_chart(fig_bar , use_container_width=True)
 
@@ -257,15 +256,3 @@ st.markdown("---")
 st.markdown(""" 
             Built with Streamlit 🎈 | Customer Segmentation Analysis Project
             """)
-
-
-    
-
-
-
-    
-        
-
-
-
-
